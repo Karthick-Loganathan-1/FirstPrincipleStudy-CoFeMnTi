@@ -1,0 +1,66 @@
+! Configuration 2: Fe(4a), Co(4b), Mn(4c), Ti(4d)
+
+&CONTROL
+    calculation   = 'vc-relax'              
+    restart_mode  = 'from_scratch'          
+    prefix        = 'CoFeMnTi_config1'      
+    pseudo_dir    = '/home/washingmachine/Galaxy/CoFeMnTi-1/Pseudo'                    
+    outdir        = '/home/washingmachine/Galaxy/CoFeMnTi-1/tmp'     
+    tstress       = .true.                  
+    tprnfor       = .true.                  
+/
+
+&SYSTEM
+    ibrav         = 2                       
+    celldm(1)     = 11.34                  
+    nat           = 4                     
+    ntyp          = 4                    
+    ecutwfc       = 60.0                
+    ecutrho       = 480.0                   
+
+   
+    occupations   = 'smearing'
+    smearing      = 'marzari-vanderbilt'
+    degauss       = 0.02                   
+
+    
+    nspin         = 2
+    starting_magnetization(1) = 1.5        
+    starting_magnetization(2) = 2.5        
+    starting_magnetization(3) = 3.0        
+    starting_magnetization(4) = 0.1      
+/
+
+&ELECTRONS
+    diagonalization = 'david'
+    mixing_mode   = 'plain'
+    mixing_beta   = 0.7                    
+    conv_thr      = 1.0d-8                
+/
+
+&IONS
+    ion_dynamics  = 'bfgs'               
+/
+
+&CELL
+    cell_dynamics = 'bfgs'                
+    press         = 0.0                   
+/
+
+
+ATOMIC_SPECIES
+  Co  58.933  Co.UPF
+  Fe  55.845  Fe.UPF
+  Mn  54.938  Mn.UPF
+  Ti  47.867  Ti.UPF
+
+!  F-43m (216)
+! 4a: (0,0,0), 4b: (0.5,0.5,0.5), 4c: (0.25,0.25,0.25), 4d: (0.75,0.75,0.75)
+ATOMIC_POSITIONS {crystal}
+  Fe      0.00    0.00    0.00
+  Co      0.50    0.50    0.50
+  Mn      0.25    0.25    0.25
+  Ti      0.75    0.75    0.75
+
+K_POINTS {automatic}
+  8 8 8 0 0 0

@@ -1,0 +1,9 @@
+&PROJWFC
+    prefix = 'CoFeMnTi_scf'
+    outdir = '/home/washingmachine/Galaxy/CoFeMnTi-1/tmp'
+    filpdos = 'CoFeMnTi'
+    Emin = 5.0
+    Emax = 30.0
+    DeltaE = 0.02
+    degauss = 0.02
+/

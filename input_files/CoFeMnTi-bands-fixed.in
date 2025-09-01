@@ -1,0 +1,6 @@
+&BANDS
+    prefix = 'CoFeMnTi_scf'
+    outdir = '/home/washingmachine/Galaxy/CoFeMnTi-1/tmp'
+    filband = 'CoFeMnTi_fixed.bands'
+    lsym = .false.
+/

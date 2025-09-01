@@ -1,0 +1,54 @@
+! SCF calculation for optimized CoFeMnTi structure
+
+&CONTROL
+    calculation   = 'scf'              
+    restart_mode  = 'from_scratch'          
+    prefix        = 'CoFeMnTi_scf'      
+    pseudo_dir    = '/home/washingmachine/Galaxy/CoFeMnTi-1/Pseudo'                    
+    outdir        = '/home/washingmachine/Galaxy/CoFeMnTi-1/tmp'     
+    tstress       = .true.                  
+    tprnfor       = .true.                  
+/
+
+&SYSTEM
+    ibrav         = 2                       
+    celldm(1)     = 10.958                  ! Optimized from VC-relax: 0.483461178 * 2 * 11.34
+    nat           = 4                     
+    ntyp          = 4                    
+    ecutwfc       = 60.0                
+    ecutrho       = 480.0                   
+
+   
+    occupations   = 'smearing'
+    smearing      = 'marzari-vanderbilt'
+    degauss       = 0.02                   
+
+    
+    nspin         = 2
+    starting_magnetization(1) = 1.5        
+    starting_magnetization(2) = 2.5        
+    starting_magnetization(3) = 3.0        
+    starting_magnetization(4) = 0.1      
+/
+
+&ELECTRONS
+    diagonalization = 'david'
+    mixing_mode   = 'plain'
+    mixing_beta   = 0.7                    
+    conv_thr      = 1.0d-8                
+/
+
+ATOMIC_SPECIES
+  Co  58.933  Co.UPF
+  Fe  55.845  Fe.UPF
+  Mn  54.938  Mn.UPF
+  Ti  47.867  Ti.UPF
+
+ATOMIC_POSITIONS (crystal)
+  Fe      0.00    0.00    0.00
+  Co      0.50    0.50    0.50
+  Mn      0.25    0.25    0.25
+  Ti      0.75    0.75    0.75
+
+K_POINTS {automatic}
+  12 12 12 0 0 0
