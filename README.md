@@ -4,7 +4,7 @@
 This repository contains a comprehensive density functional theory (DFT) study of the CoFeMnTi quaternary Heusler alloy using Quantum ESPRESSO. The investigation covers structural optimization, electronic structure, magnetic properties, and density of states analysis.
 
 ## Abstract
-We present first-principles calculations of the CoFeMnTi quaternary Heusler alloy, revealing a ferrimagnetic metallic ground state with strong spin polarization. The material adopts the L2₁ Heusler structure with a calculated lattice parameter of 5.80 Å and exhibits a total magnetic moment of 4.17 μB/cell. The electronic structure shows metallic character with significant d-orbital contributions near the Fermi level.
+first-principles calculations of the CoFeMnTi quaternary Heusler alloy, revealing a ferrimagnetic metallic ground state with strong spin polarization. The material adopts the L2₁ Heusler structure with a calculated lattice parameter of 5.80 Å and exhibits a total magnetic moment of 4.17 μB/cell. The electronic structure shows metallic character with significant d-orbital contributions near the Fermi level.
 
 ## Repository Structure
 
