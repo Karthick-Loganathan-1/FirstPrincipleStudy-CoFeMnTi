@@ -121,21 +121,3 @@ This work provides the first comprehensive first-principles characterization of 
 4. **Strong d-orbital character** governing electronic properties
 5. **Mn-dominated magnetism** with Ti antiferromagnetic coupling
 
-## Citation
-
-If you use this data or methodology, please cite:
-- Quantum ESPRESSO: P. Giannozzi et al., J. Phys.: Condens. Matter 29, 465901 (2017)
-- PBE functional: J.P. Perdew et al., Phys. Rev. Lett. 77, 3865 (1996)
-
-## License
-
-This research data is shared under the MIT License for scientific and educational purposes.
-
-## Contact
-
-For questions about the calculations or data, please refer to the analysis documents in the `analysis/` directory.
-
----
-
-*First-principles study completed using Quantum ESPRESSO DFT calculations*  
-*Date: September 2025*
